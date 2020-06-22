@@ -1,76 +1,78 @@
-# Site
-title:              Moon
-bio:                'Minimal, one column jekyll theme.'
-description:        "Moon is a minimal, one column jekyll theme for your blog."
-reading_time:       true
-words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             en_US
-url:                https://taylantatli.github.io/Moon
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+### Site Settings ###
+title               : Minho 5's Folio
+description         : >-
+                      I turn coffee :coffee: into code,
+                      use tabs over spaces
+                      and never broke production.
+baseurl             : ""                     
+repository          : Minho5Oh/Minho5Oh.github.io     
+remote_theme        : YoussefRaafatNasry/portfolYOU
 
-# Comments
-disqus_shortname:   taylantatli
 
-# Social
-# if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-instagram:          username
-#lastfm:            username
-#tumblr:            username
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-steam:              username
-#dribbble:          username
-#youtube:           username
-#youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
+### Plugins ###
+plugins:
+  - jemoji
 
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
 
-jekyll-mentions:
-    base_url: https://github.com
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+#  - documentation/partials/**                           # For Documentation Only
 
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+
+### Author Info ###
+author:
+  name              : Minho Oh
+  image             : Minho5.jpeg
+  email             : minho.oh@kaist.ac.kr
+# facebook          : your_username
+  github            : Minho5Oh
+# gitlab            : your_username
+  instagram         : 5_Minho
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+#  elements:                                             # For Documentation Only
+#    output: true                                        # For Documentation Only
+
+
+### Disqus ###
+disqus: your-short-name-disqus                          # Your website Shortname on disqus
+
+
+### Analytics ###
+analytics:
+  enabled: false                                        # Set true to enable analytics
+  google:
+    tracking_id: your-google-tracking-id
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
