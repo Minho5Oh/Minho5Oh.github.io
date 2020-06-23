@@ -1,0 +1,11 @@
+- name: Autonomous Vehicle
+  percentage: 90
+  color: primary
+
+- name: SLAM
+  percentage: 75
+  color: warning
+
+- name: Control
+  percentage: 70
+  color: success
